@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+body {
+    background-color: #19191f;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1rem;
+    height: 3.5rem;
+
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: rgb(255, 166, 0);
+    font-size: 1.1rem;
+}
+
+.selector {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.modeSelector {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.modeSelector:hover {
+    color: rgb(255, 166, 0);
+}
+
+.mainContainer {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.mainItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.mainItems h2 {
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2.5rem;
+
+    background: #222;
+    color: #fff;
+}
+
+.color {
+    color: rgb(255, 166, 0);
+}
+
+#colorsButton {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+
+    cursor: pointer;
+    background: transparent;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+
+    transition: all 0.3s linear;
+    border: 2px solid #222;
+    color: #222;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#colorsButton:hover {
+    color: #fff;
+    background-color: #222;
+}

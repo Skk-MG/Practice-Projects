@@ -1,0 +1,18 @@
+body {
+    background-color: #19191f;
+}
+
+a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #ffa600;
+}
+
+a:hover {
+    color: #0059FF;
+}
+
+li {
+    color: rgb(255, 166, 0);
+}
+
