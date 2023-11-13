@@ -1,0 +1,64 @@
+body {
+    background-color: #ececec;
+}
+
+.mainContainer {
+    height: 90vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.title {
+    color: rgb(255, 166, 0);
+    font-size: 4rem;
+}
+
+.number {
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.button {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+
+    cursor: pointer;
+    background: transparent;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.25rem;
+
+    transition: all 0.3s linear;
+    border: 2px solid #222;
+    color: #222;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    color: #fff;
+}
+
+.increase:hover {
+    background-color: green;
+}
+
+.decrease:hover {
+    background-color: red;
+}
+
+.reset:hover {
+    background-color: #222;
+}
+
+.modeSelector {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #222;
+    text-decoration: none;
+}
+
+.modeSelector:hover {
+    color: rgb(255, 166, 0);
+}

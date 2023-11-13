@@ -69,7 +69,6 @@ body {
 }
 
 #colorsButton {
-    font-family: "Roboto", sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
@@ -82,7 +81,7 @@ body {
 
     transition: all 0.3s linear;
     border: 2px solid #222;
-    color: #222;
+    color:  rgb(255, 166, 0);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
