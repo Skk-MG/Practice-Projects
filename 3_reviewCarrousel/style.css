@@ -134,32 +134,116 @@ p {
 
 /*------------------------------ Actual CSS Begins Here ------------------------------*/
 
-body {
-    background-color: #ececec;
-}
-
-
 .mainContainer {
-    height: 90vh;
-    display: grid;
-    place-items: center;
-    text-align: center;
+    width: 60%;
 }
 
 .title {
-    color: rgb(255, 166, 0);
-    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 4rem;
 }
 
-.number {
-    font-size: 6rem;
-    font-weight: bold;
+.underline {
+    height: 0.25rem;
+    width: 5rem;
+    background: var(--clr-primary);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.reviewContainer {
+    background: var(--clr-white);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--light-shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.reviewContainer:hover {
+    box-shadow: var(--dark-shadow);
+}
+
+.imgContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+.reviewerImg {
+    width: 100%;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+}
+
+.imgContainer::after {
+    content: "\f10e";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transform: translateY(25%);
+    background: var(--clr-PCLS-1);
+    color: var(--clr-white);
+}
+
+.imgContainer::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--clr-PCLS-1);
+    position: absolute;
+    top: -0.25rem;
+    right: -0.5rem;
+    border-radius: 50%;
+}
+
+#author {
+    margin-bottom: 0.25rem;
+}
+
+#job {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    background: var(--clr-PCLS-1);
+    font-size: 0.85rem;
+}
+
+#info {
+    margin-bottom: 0.75rem;
+}
+
+.prev-btn,
+.next-btn {
+    color: var(--clr-PCLS-2);
+    font-size: 1.25rem;
+    background: transparent;
+    border-color: transparent;
+    margin: 0 0.5rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background: var(--clr-PCLS-1);
 }
 
 .button {
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.1rem;
+    letter-spacing: var(--spacing);
     font-size: 1rem;
 
     cursor: pointer;
@@ -167,24 +251,13 @@ body {
     padding: 0.75rem 1.25rem;
     border-radius: 0.25rem;
 
-    transition: all 0.3s linear;
+    transition: var(--transition);
     border: 2px solid #222;
-    color: #222;
+    color: var(--clr-black);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .button:hover {
-    color: #fff;
-}
-
-.increase:hover {
-    background-color: green;
-}
-
-.decrease:hover {
-    background-color: red;
-}
-
-.reset:hover {
-    background-color: #222;
+    color: var(--clr-white);
+    background-color: var(--clr-black);
 }
