@@ -1,0 +1,181 @@
+/*------------------------------ Fonts ------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/*------------------------------ Variables ------------------------------*/
+
+:root {
+    /*---------- Primary Color (PC) ----------*/
+    --clr-primary: hsl(39, 100%, 50%);
+    /*---------- PC Darker Shades ----------*/
+    --clr-PCDS-1: hsl(39, 86%, 17%);
+    --clr-PCDS-2: hsl(39, 77%, 27%);
+    --clr-PCDS-3: hsl(39, 72%, 37%);
+    --clr-PCDS-4: hsl(39, 63%, 48%);
+    /*---------- PC Lighter Shades ----------*/
+    --clr-PCLS-1: hsl(39, 89%, 70%);
+    --clr-PCLS-2: hsl(39, 90%, 76%);
+    --clr-PCLS-3: hsl(39, 86%, 81%);
+    --clr-PCLS-4: hsl(39, 90%, 88%);
+    --clr-PCLS-5: hsl(39, 100%, 96%);
+    /*---------- Other Colors ----------*/
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-black: hsl(240, 11%, 11%);
+    --clr-red: hsl(0, 67%, 44%);
+    --clr-green: hsl(125, 66%, 44%);
+    --clr-secondary: hsl(219, 100%, 50%);
+    /*---------- Other Variables ----------*/
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --ff-roboto: "Roboto", sans-serif;
+    --ff-sans: "Open Sans", sans-serif;
+}
+
+/*------------------------------ Global Styles ------------------------------*/
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-sans);
+    background: var(--clr-black);
+    color: var(--clr-PCLS-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--ff-roboto);
+    letter-spacing: var(--spacing);
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-PCLS-1);
+}
+
+.goBackContainer {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.goBack {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    text-decoration: none;
+    letter-spacing: var(--spacing);
+}
+
+.goBack:hover {
+    color: var(--clr-secondary);
+}
+
+@media screen and (min-width: 800px) {
+
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1, h2, h3, h4 {
+        line-height: 1;
+    }
+}
+
+/*------------------------------ Actual CSS Begins Here ------------------------------*/
+
+.mainContainer {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.timer {
+    font-size: 4rem;
+}
+
+.button {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    font-size: 1rem;
+
+    cursor: pointer;
+    background: transparent;
+    padding: 0.75rem 1.25rem;
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+    border: 2px solid var(--clr-primary);
+    color: var(--clr-primary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#btnStart:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-green);
+}
+
+#btnStop:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-red);
+}
+
+#btnReset:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-secondary);
+}
