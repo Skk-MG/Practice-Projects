@@ -135,7 +135,7 @@ p {
 /*------------------------------ Actual CSS Begins Here ------------------------------*/
 
 .mainContainer {
-    width: 60%;
+    width: 50%;
 }
 
 .title {
@@ -174,7 +174,7 @@ p {
     margin-bottom: 1.5rem;
 }
 
-.reviewerImg {
+#reviewerImg {
     width: 100%;
     display: block;
     height: 100%;
@@ -184,16 +184,17 @@ p {
 }
 
 .imgContainer::after {
-    content: "\f10e";
+    content: "☆";
+    font-size: 2rem;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 2.5rem;
     height: 2.5rem;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    transform: translateY(25%);
     background: var(--clr-PCLS-1);
     color: var(--clr-white);
 }
@@ -218,14 +219,15 @@ p {
     text-transform: uppercase;
     background: var(--clr-PCLS-1);
     font-size: 0.85rem;
+    color: var(--clr-PCDS-1);
 }
 
 #info {
     margin-bottom: 0.75rem;
 }
 
-.prev-btn,
-.next-btn {
+.prevBtn,
+.nextBtn {
     color: var(--clr-PCLS-2);
     font-size: 1.25rem;
     background: transparent;
@@ -235,12 +237,12 @@ p {
     cursor: pointer;
 }
 
-.prev-btn:hover,
-.next-btn:hover {
+.prevBtn:hover,
+.nextBtn:hover {
     background: var(--clr-PCLS-1);
 }
 
-.button {
+.randomBtn {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: var(--spacing);
@@ -257,7 +259,7 @@ p {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.button:hover {
+.randomBtn:hover {
     color: var(--clr-white);
     background-color: var(--clr-black);
 }
