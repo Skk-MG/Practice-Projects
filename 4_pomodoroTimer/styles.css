@@ -144,6 +144,9 @@ p {
     gap: 4rem;
 }
 
+.title {
+    color: var(--clr-PCDS-4);
+}
 .timer {
     font-size: 4rem;
 }

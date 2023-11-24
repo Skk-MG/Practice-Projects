@@ -147,6 +147,10 @@ p {
     font-size: 1.1rem;
 }
 
+.navbar h1 {
+    font-size: 2rem;
+}
+
 .selector {
     display: flex;
     flex-direction: row;
