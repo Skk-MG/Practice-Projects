@@ -89,7 +89,24 @@ h4 {
 
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-PCLS-1);
+}
+
+.goBackContainer {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.goBack {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    text-decoration: none;
+    letter-spacing: var(--spacing);
+}
+
+.goBack:hover {
+    color: var(--clr-secondary);
 }
 
 @media screen and (min-width: 800px) {
@@ -116,44 +133,81 @@ p {
 
 /*------------------------------ Actual CSS Begins Here ------------------------------*/
 
-a {
-    font-size: 1.8rem;
-    text-decoration: none;
-    color: var(--clr-primary);
-}
-
-a:hover {
-    color: var(--clr-secondary);
-}
-
-li {
-    color: var(--clr-PCDS-4)
-}
-
-.lists {
-    display: grid;
-    grid-template-columns: 2fr 50%;
-    justify-items: center;  
-    padding-top: 1rem;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem;
+.menu {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 1rem 0;
+    align-items: baseline;
+    align-content: baseline;
 }
 
-.footer a {
+.open-btn {
     font-size: 2rem;
-    cursor: pointer ;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    color: var(--clr-primary);
+    background-color: transparent;
+    cursor: pointer;
 }
 
-.footer a:hover {
+.open-btn:hover {
+    background-color: var(--clr-PCDS-1);
     transform: translateY(-5px);
-    color: var(--clr-primary);
     transition: var(--transition);
 }
 
+.sidebar {
+    display: none;
+    flex-direction: column;
+    gap: 2rem;
+    width: 25rem;
+    padding: 1rem;
+    background-color: var(--clr-primary) ;
+    color: var(--clr-black);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.slide-in-left{-webkit-animation:slide-in-left .5s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-left .5s cubic-bezier(.25,.46,.45,.94) both}
+
+@-webkit-keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+
+.show {
+    display: flex;
+}
+
+.sidebarA {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.close-btn {
+    display: block;
+    font-size: 2rem;
+    padding: 0.5rem;
+    color: var(--clr-red);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: var(--clr-black);
+    border-radius: 50%;
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+.sidebarB {
+    padding: 2rem 0;
+    font-size: 1.5rem;
+}
+
+.sidebarC {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}

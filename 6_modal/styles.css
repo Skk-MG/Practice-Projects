@@ -92,6 +92,24 @@ p {
   color: var(--clr-PCLS-1);
 }
 
+.goBackContainer {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.goBack {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+    text-decoration: none;
+    letter-spacing: var(--spacing);
+}
+
+.goBack:hover {
+    color: var(--clr-secondary);
+}
+
 @media screen and (min-width: 800px) {
 
     h1 {
@@ -116,44 +134,55 @@ p {
 
 /*------------------------------ Actual CSS Begins Here ------------------------------*/
 
-a {
-    font-size: 1.8rem;
-    text-decoration: none;
-    color: var(--clr-primary);
-}
-
-a:hover {
-    color: var(--clr-secondary);
-}
-
-li {
-    color: var(--clr-PCDS-4)
-}
-
-.lists {
-    display: grid;
-    grid-template-columns: 2fr 50%;
-    justify-items: center;  
-    padding-top: 1rem;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem;
+.bannerContainer {
+    padding: 8rem;
+    border-radius: 1rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-items: center;
+    gap: 4rem;
+    background-color: var(--clr-PCLS-4);
 }
 
-.footer a {
-    font-size: 2rem;
-    cursor: pointer ;
+.open-btn {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    background-color: var(--clr-primary);
+    cursor: pointer;
 }
 
-.footer a:hover {
+.open-btn:hover {
+    background-color: var(--clr-PCLS-1);
     transform: translateY(-5px);
-    color: var(--clr-primary);
     transition: var(--transition);
 }
 
+.modalOverlay {
+    display: none;
+    position: absolute;
+    padding: 8rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-items: center;
+    gap: 4rem;
+    background-color: var(--clr-PCLS-4);
+}
+
+.close-btn {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    background-color: var(--clr-primary);
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background-color: var(--clr-PCLS-1);
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+.show {
+    display: flex;
+}
